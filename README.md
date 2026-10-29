@@ -14,7 +14,7 @@ Works on Linux and macOS, and should work on Windows (untested). Install ffmpeg 
 ### Linux / macOS
 
 ```sh
-git clone <repo-url>
+git clone https://github.com/Gamahiro/video-compressor
 cd video-compressor
 ln -s "$PWD/vcompress" ~/.local/bin/vcompress
 ```
@@ -24,7 +24,7 @@ Or just copy the `vcompress` file anywhere on your `PATH`.
 ### Windows
 
 ```powershell
-git clone <repo-url>
+git clone https://github.com/Gamahiro/video-compressor
 cd video-compressor
 python vcompress video.mp4
 ```
