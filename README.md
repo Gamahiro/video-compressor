@@ -9,6 +9,10 @@ A tiny CLI that compresses a video with ffmpeg so it fits under chat upload limi
 
 ## Install
 
+Works on Linux and macOS, and should work on Windows (untested). Install ffmpeg first (e.g. `apt install ffmpeg`, `brew install ffmpeg`, or `winget install ffmpeg`).
+
+### Linux / macOS
+
 ```sh
 git clone <repo-url>
 cd video-compressor
@@ -16,6 +20,16 @@ ln -s "$PWD/vcompress" ~/.local/bin/vcompress
 ```
 
 Or just copy the `vcompress` file anywhere on your `PATH`.
+
+### Windows
+
+```powershell
+git clone <repo-url>
+cd video-compressor
+python vcompress video.mp4
+```
+
+Windows ignores the script's shebang, so run it through `python` as shown. To call it from anywhere, put the folder on your `PATH` and use `python path\to\vcompress`, or wrap it in a small `.bat` file.
 
 ## Usage
 
@@ -25,6 +39,8 @@ vcompress --low video.mp4       # smallest file, max 480p
 vcompress --high video.mp4      # best quality, max 1080p
 vcompress -o out.mp4 video.mp4  # choose the output name
 ```
+
+On Windows, prefix each command with `python ` (e.g. `python vcompress --low video.mp4`).
 
 | Level    | Max height | Quality (CRF) | Audio |
 |----------|-----------|---------------|-------|
